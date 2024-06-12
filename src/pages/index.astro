@@ -11,21 +11,28 @@ const last_posts = posts.slice(0, 3);
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
+    <div class="text-5xl font-bold">Sulkyoptimism</div>
+    <div class="text-3xl py-3 font-bold">Just someone who does stuff</div>
     <div class="py-2">
       <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+        This is a space for recording projects, tracking progress and generally just a think-pad.
+        Typically I never write anything down, my mantra has always been:
+      </text>
+    </div>
+    <div class="p-2">
+      <text class="text-xl">
+        If its interesting then you <b>learn</b> it, if you learn it you <b>know</b> it; things you know, you dont need to remember.
+      </text>
+    </div>
+    <div class="py-2">
+      <text class="text-lg">
+        But I wanted to try something different, and so <i> here we are.</i>
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a>
+      <div class="py-2">I also work on a large project with a few others called Risk of Resources, go check it out!</div>
+      <a class="btn" href="https://www.riskofresources.com/" target="_blank">Risk of Resources</a>
+      <a class="btn btn-outline" href="/projects/">Write up</a>
     </div>
   </div>
 
@@ -34,45 +41,19 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
+    title="Skating Light set up"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    desc="My current personal indulgence project"
+    url="/projects/skate-lighting-insert-intro"
     badge="NEW"
+    target="_self"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
+    title="Risk of Resources"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    desc="A large project specifically made to facilitate events in the RoR2 twitch community."
+    url="/projects/risk-of-resources"
+    target="_self"
   />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
-
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
 </BaseLayout>
